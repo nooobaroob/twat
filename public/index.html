@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        #loading {
+            display: none;
+        }
+        #video-details {
+            display: none;
+        }
+        button {
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Video Downloader</h1>
+    <input type="text" id="video-url" placeholder="Enter YouTube URL" />
+    <button onclick="fetchVideoInfo()">Get Video Info</button>
 
+    <div id="loading">
+        <p>Loading...</p>
+    </div>
+
+    <div id="video-details">
+        <h2 id="title"></h2>
+        <img id="thumbnail" src="" alt="Thumbnail" width="200">
+        <div id="download-buttons"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
